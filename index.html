@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 90px;
+            color: grey;
+        }
+
+        h1:after {
+            content: "|";
+            animation-name: blink2;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            color: black;
+        }
+
+        @keyframes blink1 {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes blink2 {
+            0% {
+                opacity: 0;
+            }
+
+            49% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            99% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <script>
+        let splittedText = `Effective Therapy Against Stress.`.split("")
+
+        let cCharacter = 0
+        let headlineDOMEl = document.querySelector("h1")
+
+        let intervalID = setInterval(() => {
+            headlineDOMEl.innerHTML += splittedText[cCharacter++]
+
+            if (cCharacter > splittedText.length - 1) clearInterval(intervalID)
+        }, 100);
+
+    </script>
+</body>
+
+</html>
