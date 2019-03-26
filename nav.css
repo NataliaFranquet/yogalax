@@ -1,0 +1,79 @@
+nav {
+    background: black;
+    padding: 2.6rem 1.5rem;
+}
+
+nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  position: relative;
+  top: -.1rem;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.6rem;
+  text-decoration: none;
+  background-image: url(./img/hamburguer.png);
+  background-repeat: no-repeat;
+  padding-left: 2.5rem;
+  letter-spacing: .16rem;
+}
+
+nav ul {
+  color: white;
+  height: 0;
+  transition: height 0.5s;
+}
+
+nav ul.active {
+  height: 30rem;
+  transition: height 0.5s;
+}
+
+nav ul li {
+  margin-top: 3.5rem;
+  font-size: 1.4rem;
+  color: grey;
+}
+
+nav ul li:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 990px) {
+    nav {
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav div {
+        display: block;
+    }
+
+    nav ul {
+      display: flex;
+
+    }
+
+    nav ul li {
+        display: block;
+        color: black;
+        margin-top: 0;
+        margin-right: 2em;
+    }
+
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    nav .hamburguer {
+        display: none;
+    }
+}

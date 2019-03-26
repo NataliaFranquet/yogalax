@@ -1,17 +1,80 @@
 html {
-  font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 10px;
 }
 
 h1.animated {
-  font-weight: 200;
-  font-size: 90px;
-  color: black;
+    font-weight: 200;
+    font-size: 9rem;
+    color: black;
 }
 
 h1.animated:after {
-  content: "|";
-  animation-name: blink2;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-  color: black;
+    content: "|";
+    animation-name: blink2;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    color: black;
+}
+
+body {
+    display: block;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4d0e5+0,f7f7f7+100&0.78+0,0.25+100 */
+    background: -moz-linear-gradient(left, rgba(228, 208, 229, 0.78) 0%, rgba(247, 247, 247, 0.25) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(228, 208, 229, 0.78) 0%, rgba(247, 247, 247, 0.25) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(228, 208, 229, 0.78) 0%, rgba(247, 247, 247, 0.25) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c7e4d0e5', endColorstr='#40f7f7f7', GradientType=1);
+    /* IE6-9 */
+}
+
+@media (min-width: 1100px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    #main-wrapper {
+        max-width: 110rem;
+    }
+}
+
+#cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url(./img/bg_2.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 77.5rem;
+  background-size: contain;
+}
+
+
+
+#cta div {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 75rem;
+}
+
+#cta button {
+  background: #d291bc;
+  border-radius: 3rem;
+  color: white;
+  padding: 1.5rem;
+  width: 16rem;
+}
+
+#cta h2 {
+  font-size: 3.2rem;
+  font-weight: 200;
+}
+
+#cta h1, #cta h2 {
+  margin-bottom: 5.5rem;
 }
