@@ -1,0 +1,17 @@
+html {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1.animated {
+  font-weight: 200;
+  font-size: 90px;
+  color: black;
+}
+
+h1.animated:after {
+  content: "|";
+  animation-name: blink2;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  color: black;
+}
